@@ -5,12 +5,12 @@ machine:
     GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'
 
 general:
-  pre:
-    - chmod +x gradlew
   artifacts:
     - "/home/ubuntu/android-hospital/app/build/reports/checkstyle/checkstyle.html"
 
 dependencies:
+  pre:
+    - chmod +x gradlew
   cache_directories:
     - ~/.android
     - ~/android
