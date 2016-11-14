@@ -2,10 +2,11 @@ package com.example.ereminilya.drive2_ok.utils;
 
 import android.support.annotation.NonNull;
 
+import com.example.ereminilya.drive2_ok.login.models.LoginBody;
 import com.example.ereminilya.drive2_ok.main.models.MainResponse;
 import com.example.ereminilya.drive2_ok.models.LoginResponse;
 
-import retrofit2.http.Field;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import rx.Observable;
@@ -22,12 +23,7 @@ public interface Api {
 
     @GET("public/main.cshtml") Observable<MainResponse> getMain();
 
-    @POST("public/login") Observable<LoginResponse> login(@NonNull @Field("loign") String login,
-                                                   @NonNull @Field("password") String password,
-                                                   @Field("apiKeyId") int apiKeyId,
-                                                   @NonNull @Field("apiKey") String apiKey,
-                                                   @NonNull @Field("platform") String platform);
-
+    @POST("public/login") Observable<LoginResponse> login(@NonNull @Body LoginBody loginBody);
 
     String ABOUT_CAR      = "aboutCar";
     String ABOUT_USER     = "aboutUser";
