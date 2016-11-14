@@ -24,11 +24,11 @@
 * Ответы на комменты
 
 ## Технологии
-Для показа UI используется conductor - за его плавные переходы между экранами.
-Для взаимодействия с сетью конечно же retrofit2 + gson
-Хранение данных - shared preferences + gson
-Загрузка изображений - glide
-DI: dagger2
-Тесты: junit, mockito, java codestyle, android lint и вероятно espresso, если оно будет безболезненно работать с conductor.
-Хочется также попробовать MockWebServer.
-CI: CircleCI
+Для показа UI используется conductor - за его плавные переходы между экранами.<br>
+Для взаимодействия с сетью конечно же retrofit2 + gson<br>
+Хранение данных - shared preferences + gson<br>
+Загрузка изображений - glide<br>
+DI: dagger2<br>
+Тесты: junit, mockito, java codestyle, android lint и вероятно espresso, если оно будет безболезненно работать с conductor.<br>
+Хочется также попробовать MockWebServer.<br>
+CI: CircleCI<br>
