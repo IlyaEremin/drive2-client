@@ -57,10 +57,13 @@ dependencies {
     compile 'com.bluelinelabs:conductor:2.0.4'
     compile 'com.bluelinelabs:conductor-rxlifecycle:2.0.4'
 
+    compile 'com.jakewharton:butterknife:7.0.0'
+
+    compile 'io.reactivex:rxandroid:1.2.1'
+
     compile "com.google.dagger:dagger:2.5"
     apt "com.google.dagger:dagger-compiler:2.5"
     provided 'javax.annotation:jsr250-api:1.0'
-
 
     testCompile 'junit:junit:4.12'
 }
