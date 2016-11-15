@@ -8,4 +8,5 @@
         <ignore regexp="okio-1.9.0.jar"/>
         <ignore regexp="retrofit-2.1.0.jar"/>
     </issue>
+    <issue id="NewApi" severity="informational"/>
 </lint>
