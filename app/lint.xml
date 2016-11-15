@@ -9,4 +9,5 @@
         <ignore regexp="retrofit-2.1.0.jar"/>
     </issue>
     <issue id="NewApi" severity="informational"/>
+    <issue id="GradleDependency" severity="informational"/>
 </lint>
