@@ -11,6 +11,7 @@ general:
 dependencies:
   pre:
     - chmod +x gradlew
+    - if [ ! -d "/usr/local/android-sdk-linux/platforms/android-25" ]; then echo y | android update sdk --no-ui --all --filter "android-25"; fi
   cache_directories:
     - ~/.android
     - ~/android
