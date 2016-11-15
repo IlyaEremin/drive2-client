@@ -17,13 +17,8 @@ import rx.Observable;
 
 public interface Api {
 
-    String API_KEY = "dUvrR6k-ky0dLqGMR5yOH950Swys6rK_-AZE48_8ebcM6mGs0yU3dOoPDanYJIASzFFna2rcS1s3505lPyncNQ";
-
-    String BASE_URL = "https://api.drive2.ru/v2.8/";
-
-    @GET("public/main.cshtml") Observable<MainResponse> getMain();
-
-    @POST("public/login") Observable<LoginResponse> login(@NonNull @Body LoginBody loginBody);
+    String API_KEY = "dUvrR6k-ky0dLqGMR5yOH950Swys6rK_-AZE48_8ebcM6mGs0yU3dOoPDanYJI" +
+        "ASzFFna2rcS1s3505lPyncNQ";
 
     String ABOUT_CAR      = "aboutCar";
     String ABOUT_USER     = "aboutUser";
@@ -48,5 +43,12 @@ public interface Api {
     String UPDATE         = "update";
     String UPLOAD_IMAGE   = "uploadImage";
     String USER           = "user";
+
+    String BASE_URL = "https://api.drive2.ru/v2.8/";
+
+    @GET("public/main.cshtml") Observable<MainResponse> getMain();
+
+    @POST("public/login.cshtml")
+    Observable<LoginResponse> login(@NonNull @Body LoginBody loginBody);
 
 }
