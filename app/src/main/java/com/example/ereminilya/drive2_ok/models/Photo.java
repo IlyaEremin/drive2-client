@@ -5,10 +5,10 @@ import java.util.List;
 /**
  * Created by ereminilya on 12/11/16.
  */
-
 public class Photo {
-    List<Image> images;
-    String color;
+
+    private List<Image> images;
+    private String      color;
 
     public List<Image> getImages() {
         return images;

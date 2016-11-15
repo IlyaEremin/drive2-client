@@ -13,13 +13,8 @@ import java.util.List;
 
 public class MainResponse {
 
-    public static class _Response {
-        CarOfTheDay carOfTheDay;
-        List<Post>  topPosts;
-    }
-
-    _Response response;
-    List<String> atoms;
+    private InnerResponse response;
+    private List<String>  atoms;
 
     public void makeProperImagesUrls() {
         for (Post topPost : response.topPosts) {
@@ -45,5 +40,10 @@ public class MainResponse {
 
     public List<Post> getTopPosts() {
         return response.topPosts;
+    }
+
+    public static class InnerResponse {
+        private CarOfTheDay carOfTheDay;
+        private List<Post>  topPosts;
     }
 }
