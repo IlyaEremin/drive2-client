@@ -3,8 +3,8 @@ package com.example.ereminilya.drive2_ok.utils;
 import android.support.annotation.NonNull;
 
 import com.example.ereminilya.drive2_ok.login.models.LoginBody;
+import com.example.ereminilya.drive2_ok.login.models.LoginResponse;
 import com.example.ereminilya.drive2_ok.main.models.MainResponse;
-import com.example.ereminilya.drive2_ok.models.LoginResponse;
 
 import retrofit2.http.Body;
 import retrofit2.http.GET;

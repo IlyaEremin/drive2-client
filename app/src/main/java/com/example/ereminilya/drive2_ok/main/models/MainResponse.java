@@ -1,9 +1,8 @@
 package com.example.ereminilya.drive2_ok.main.models;
 
 import com.example.ereminilya.drive2_ok.models.CarOfTheDay;
-import com.example.ereminilya.drive2_ok.models.Image;
-import com.example.ereminilya.drive2_ok.models.Photo;
 import com.example.ereminilya.drive2_ok.models.Post;
+import com.example.ereminilya.drive2_ok.utils.LinkParser;
 
 import java.util.List;
 
@@ -18,24 +17,9 @@ public class MainResponse {
 
     public void makeProperImagesUrls() {
         for (Post topPost : response.topPosts) {
-            for (Photo photo : topPost.getPhotos()) {
-                for (Image image : photo.getImages()) {
-                    makeProperUrl(image);
-                }
-            }
+            LinkParser.makeProperUrl(atoms, topPost.getPhotos());
         }
-        for (Image image : response.carOfTheDay.getPhoto().getImages()) {
-            makeProperUrl(image);
-        }
-    }
-
-    private void makeProperUrl(Image image) {
-        for (int i = 0; i < atoms.size(); i++) {
-            if (image.getUrl().contains("$" + i)) {
-                image.setUrl(image.getUrl().replace("$" + i, atoms.get(i)));
-                break;
-            }
-        }
+        LinkParser.makeProperUrl(atoms, response.carOfTheDay.getPhoto());
     }
 
     public List<Post> getTopPosts() {
