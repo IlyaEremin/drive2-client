@@ -1,4 +1,4 @@
-Нормальный android-клиент для сервиса Drive2
+Android-клиент для сервиса Drive2.ru [![CircleCI](https://circleci.com/gh/IlyaEremin/drive2-client/tree/master.svg?style=svg)](https://circleci.com/gh/IlyaEremin/drive2-client/tree/master)
 =====================
 ## Мотивация
 Мне нравится идея drive2, но мне не нравится ни их сайт, ни их андроид приложение.
