@@ -8,10 +8,6 @@ import java.util.List;
 
 public class LoginResponse {
 
-    private static class InnerResponse {
-        User user;
-    }
-
     private InnerResponse response;
     private List<String>  atoms;
 
@@ -22,4 +18,9 @@ public class LoginResponse {
     public List<String> getAtoms() {
         return atoms;
     }
+
+    private static class InnerResponse {
+        private User user;
+    }
+
 }

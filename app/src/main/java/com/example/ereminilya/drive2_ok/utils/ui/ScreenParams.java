@@ -8,8 +8,8 @@ import android.support.annotation.LayoutRes;
 
 public class ScreenParams {
 
-    @LayoutRes private final int layout;
-    private boolean injectDependency;
+    @LayoutRes private final int     layout;
+    private                  boolean injectDependency;
 
     public ScreenParams(@LayoutRes int layout) {
         this.layout = layout;
@@ -20,7 +20,7 @@ public class ScreenParams {
         return this;
     }
 
-    public @LayoutRes int getLayout() {
+    @LayoutRes public int getLayout() {
         return layout;
     }
 

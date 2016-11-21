@@ -13,7 +13,7 @@ import com.example.ereminilya.drive2_ok.utils.di.SingletonsComponent;
 
 public class App extends Application {
 
-    @NonNull SingletonsComponent component;
+    @NonNull private SingletonsComponent component;
 
     @Override public void onCreate() {
         super.onCreate();

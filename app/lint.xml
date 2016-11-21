@@ -10,4 +10,5 @@
     </issue>
     <issue id="NewApi" severity="informational"/>
     <issue id="GradleDependency" severity="informational"/>
+    <issue id="Overdraw" severity="ignore"/>
 </lint>

@@ -110,7 +110,7 @@ public class Singletons {
     }
 
     @Provides @Singleton
-    SessionManager provideSessionManager(@NonNull Storage storage){
+    SessionManager provideSessionManager(@NonNull Storage storage) {
         return new SessionManager(storage);
     }
 
