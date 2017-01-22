@@ -113,5 +113,4 @@ public class Singletons {
     SessionManager provideSessionManager(@NonNull Storage storage) {
         return new SessionManager(storage);
     }
-
 }
