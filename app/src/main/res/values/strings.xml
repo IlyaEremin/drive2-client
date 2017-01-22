@@ -3,4 +3,13 @@
     <string name="login_enter">Войти</string>
     <string name="login_hint_login">Логин (почта)</string>
     <string name="login_password">Пароль</string>
+
+    <string name="error_network_unavailable">Братан, что-то с подключением к сети</string>
+    <string name="error">Ошибка</string>
+    <string name="error_something_went_wrong">Что-то пошло не так ¯\_(ツ)_/¯</string>
+    <string name="loading">Пожалуйста, подождите</string>
+    <string name="login_progress">Входим…</string>
+    <string name="profile_my_cars">Мои машины:</string>
+    <string name="profile_no_cars">Пока нет...</string>
+
 </resources>
