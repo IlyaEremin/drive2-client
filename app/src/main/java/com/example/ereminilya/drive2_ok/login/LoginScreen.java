@@ -57,7 +57,7 @@ public class LoginScreen extends BaseController {
                 hideProgressDialog();
             })
             .subscribe(result -> {
-                getRouter().pushController(RouterTransaction
+                getRouter().setRoot(RouterTransaction
                     .with(new ProfileScreen())
                     .pushChangeHandler(new HorizontalChangeHandler())
                     .popChangeHandler(new HorizontalChangeHandler())
