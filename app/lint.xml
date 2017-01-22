@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
-    <issue id="IconExpectedSize" severity="fatal"/>
-    <issue id="UseCompoundDrawables" severity="ignore"/>
-    <issue id="ContentDescription" severity="ignore"/>
-    <issue id="GoogleAppIndexingWarning" severity="ignore"/>
+    <issue id="IconExpectedSize" severity="fatal" />
+    <issue id="UseCompoundDrawables" severity="ignore" />
+    <issue id="ContentDescription" severity="ignore" />
+    <issue id="GoogleAppIndexingWarning" severity="ignore" />
     <issue id="InvalidPackage">
-        <ignore regexp="okio-1.9.0.jar"/>
-        <ignore regexp="retrofit-2.1.0.jar"/>
+        <ignore regexp="okio-1.11.0.jar" />
+        <ignore regexp="retrofit-2.1.0.jar" />
     </issue>
-    <issue id="NewApi" severity="informational"/>
-    <issue id="GradleDependency" severity="informational"/>
-    <issue id="Overdraw" severity="ignore"/>
+    <issue id="NewApi" severity="informational" />
+    <issue id="GradleDependency" severity="informational" />
+    <issue id="Overdraw" severity="ignore" />
+    <issue id="UnusedResources" severity="ignore">
+        <ignore path="res/lancer.png" />
+    </issue>
+    <issue id="IconMissingDensityFolder" severity="ignore">
+        <ignore path="res/drawable-mdpi" />
+        <ignore path="res/drawable-xxxhdpi" />
+    </issue>
+
 </lint>

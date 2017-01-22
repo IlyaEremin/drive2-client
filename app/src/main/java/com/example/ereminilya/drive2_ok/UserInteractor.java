@@ -22,11 +22,11 @@ import rx.Observable;
 
 public class UserInteractor {
 
-    private static final String KEY_USER = "user";
-    private static final String KEY_CARS = "cars";
-
     public static final Type CARS_LIST = new TypeToken<ArrayList<Car>>() {
     }.getType();
+
+    private static final String KEY_USER = "user";
+    private static final String KEY_CARS = "cars";
 
     private final Storage storage;
     private final Api     api;

@@ -3,7 +3,6 @@ package com.example.ereminilya.drive2_ok.login;
 import android.app.ProgressDialog;
 import android.support.annotation.Nullable;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler;
@@ -64,7 +63,6 @@ public class LoginScreen extends BaseController {
                 );
             }, error -> {
                 // TODO parse error
-                Toast.makeText(LoginScreen.this.getActivity(), "Svisni v hyi", Toast.LENGTH_SHORT).show();
             });
     }
 

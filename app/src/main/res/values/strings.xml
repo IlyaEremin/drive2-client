@@ -10,6 +10,6 @@
     <string name="loading">Пожалуйста, подождите</string>
     <string name="login_progress">Входим…</string>
     <string name="profile_my_cars">Мои машины:</string>
-    <string name="profile_no_cars">Пока нет...</string>
+    <string name="profile_no_cars">Пока нет…</string>
 
 </resources>
