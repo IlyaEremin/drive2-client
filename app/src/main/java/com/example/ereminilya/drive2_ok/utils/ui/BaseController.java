@@ -20,7 +20,7 @@ public abstract class BaseController extends Controller {
         if (getScreenParams().needDependencyInjection()) {
             inject();
         }
-        View view = inflater.inflate(getScreenParams().getLayout(), container);
+        View view = inflater.inflate(getScreenParams().getLayout(), container, false);
         ButterKnife.bind(this, view);
         onViewInitialized();
         return view;
