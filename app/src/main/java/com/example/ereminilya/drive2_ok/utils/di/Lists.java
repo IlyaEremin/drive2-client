@@ -17,5 +17,8 @@ public class Lists {
         }
         return result;
     }
-    
+
+    public static boolean isEmpty(@Nullable List list) {
+        return list == null || list.isEmpty();
+    }
 }
