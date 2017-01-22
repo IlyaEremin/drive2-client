@@ -16,4 +16,12 @@ public class Image {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    public int getWidth() {
+        return w;
+    }
+
+    public int getHeight() {
+        return h;
+    }
 }

@@ -1,5 +1,7 @@
 package com.example.ereminilya.drive2_ok.login.models;
 
+import com.example.ereminilya.drive2_ok.models.Car;
+
 import java.util.List;
 
 /**
@@ -15,12 +17,16 @@ public class LoginResponse {
         return response.user;
     }
 
+    public List<Car> getCars() {
+        return response.cars;
+    }
+
     public List<String> getAtoms() {
         return atoms;
     }
 
     private static class InnerResponse {
-        private User user;
+        private User      user;
+        private List<Car> cars;
     }
-
 }
