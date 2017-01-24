@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
-        android:text="Drive2.ru"
+        android:text="@string/drive2_ru"
         android:textAllCaps="true"
         android:textColor="@android:color/white"
         android:textSize="48sp"
