@@ -1,5 +1,6 @@
 package com.example.ereminilya.drive2_ok.utils.di;
 
+import com.example.ereminilya.drive2_ok.MainActivity;
 import com.example.ereminilya.drive2_ok.login.LoginScreen;
 import com.example.ereminilya.drive2_ok.profile.ProfileScreen;
 
@@ -18,4 +19,6 @@ public interface SingletonsComponent {
     void inject(LoginScreen loginScreen);
 
     void inject(ProfileScreen profileScreen);
+
+    void inject(MainActivity mainActivity);
 }

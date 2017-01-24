@@ -8,8 +8,20 @@ import com.bluelinelabs.conductor.Conductor;
 import com.bluelinelabs.conductor.Router;
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.example.ereminilya.drive2_ok.login.LoginScreen;
+import com.example.ereminilya.drive2_ok.profile.ProfileScreen;
+import com.example.ereminilya.drive2_ok.utils.SessionManager;
+import com.example.ereminilya.drive2_ok.utils.di.Injector;
+
+import javax.inject.Inject;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
+
+    @Inject SessionManager sessionManager;
+
+    @Bind(R.id.controller_container) ViewGroup uiCotrollerContainer;
 
     private Router router;
 
@@ -17,10 +29,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ViewGroup container = (ViewGroup) findViewById(R.id.controller_container);
-        router = Conductor.attachRouter(this, container, savedInstanceState);
+        ButterKnife.bind(this);
+        Injector.inject(this);
+        router = Conductor.attachRouter(this, uiCotrollerContainer, savedInstanceState);
         if (!router.hasRootController()) {
-            router.setRoot(RouterTransaction.with(new LoginScreen()));
+            if (sessionManager.userAuthorized()) {
+                router.setRoot(RouterTransaction.with(new ProfileScreen()));
+            } else {
+                router.setRoot(RouterTransaction.with(new LoginScreen()));
+            }
         }
     }
 
