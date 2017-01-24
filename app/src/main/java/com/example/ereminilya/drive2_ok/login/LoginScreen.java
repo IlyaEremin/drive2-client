@@ -4,12 +4,14 @@ import android.app.ProgressDialog;
 import android.support.annotation.Nullable;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler;
 import com.example.ereminilya.drive2_ok.R;
 import com.example.ereminilya.drive2_ok.UserInteractor;
 import com.example.ereminilya.drive2_ok.login.models.LoginBody;
+import com.example.ereminilya.drive2_ok.models.ApiError;
 import com.example.ereminilya.drive2_ok.profile.ProfileScreen;
 import com.example.ereminilya.drive2_ok.utils.Keyboard;
 import com.example.ereminilya.drive2_ok.utils.Rxs;
@@ -69,7 +71,9 @@ public class LoginScreen extends BaseController {
                     .popChangeHandler(new HorizontalChangeHandler())
                 );
             }, error -> {
-                // TODO parse error
+                if (error instanceof ApiError) {
+                    Toast.makeText(context(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                }
             });
     }
 

@@ -4,9 +4,11 @@ import android.support.annotation.NonNull;
 
 import com.example.ereminilya.drive2_ok.login.models.LoginBody;
 import com.example.ereminilya.drive2_ok.login.models.User;
+import com.example.ereminilya.drive2_ok.models.ApiError;
 import com.example.ereminilya.drive2_ok.models.Car;
 import com.example.ereminilya.drive2_ok.utils.Api;
 import com.example.ereminilya.drive2_ok.utils.LinkParser;
+import com.example.ereminilya.drive2_ok.utils.di.Lists;
 import com.example.ereminilya.drive2_ok.utils.storage.Storage;
 import com.google.gson.reflect.TypeToken;
 
@@ -38,6 +40,13 @@ public class UserInteractor {
 
     public Observable<Boolean> login(LoginBody loginBody) {
         return api.login(loginBody)
+            .map(result -> {
+                if (!Lists.isEmpty(result.getError())) {
+                    throw new ApiError(Lists.toString(result.getError()));
+                } else {
+                    return result;
+                }
+            })
             .map(result -> {
                 LinkParser.makeProperUrl(result.getAtoms(), result.getUser().getAvatar());
                 storage.put(KEY_USER, result.getUser());
