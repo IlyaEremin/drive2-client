@@ -25,7 +25,7 @@ public class SessionManager {
         return storage.getString(KEY_COOKIE);
     }
 
-    public boolean containsCookie() {
-        return false;
+    public boolean userAuthorized() {
+        return storage.contains(KEY_COOKIE);
     }
 }
