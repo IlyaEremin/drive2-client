@@ -82,7 +82,10 @@ public class Singletons {
                 return chain.proceed(request);
             } else {
                 Response response = chain.proceed(chain.request());
-                sessionManager.saveCookie(Lists.toString(response.headers("Set-Cookie")));
+                String cookieFromServer = Lists.toString(response.headers("Set-Cookie"));
+                if (cookieFromServer != null && cookieFromServer.startsWith(".AMET")) {
+                    sessionManager.saveCookie(cookieFromServer);
+                }
                 return response;
             }
         });

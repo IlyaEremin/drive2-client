@@ -3,11 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:gravity="center"
     android:orientation="vertical"
     android:paddingLeft="24dp"
     android:paddingRight="24dp"
     >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="@string/drive2_ru"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        />
 
     <EditText
         android:id="@+id/et_login"
@@ -15,6 +27,9 @@
         android:layout_height="wrap_content"
         android:hint="@string/login_hint_login"
         android:inputType="textEmailAddress"
+        android:textColor="@android:color/white"
+        android:textColorHint="#CFBDBD"
+        android:imeOptions="actionNext"
         />
 
     <EditText
@@ -24,6 +39,9 @@
         android:layout_marginTop="8dp"
         android:hint="@string/login_password"
         android:inputType="textPassword"
+        android:textColor="@android:color/white"
+        android:textColorHint="#CFBDBD"
+        android:imeOptions="actionDone"
         />
 
     <Button
@@ -31,8 +49,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="@drawable/login_button"
         android:text="@string/login_enter"
+        android:textColor="@android:color/white"
         />
-
 
 </LinearLayout>
