@@ -1,7 +1,6 @@
 package com.example.ereminilya.drive2_ok;
 
 import android.app.Application;
-import android.support.annotation.NonNull;
 
 import com.example.ereminilya.drive2_ok.utils.di.DaggerSingletonsComponent;
 import com.example.ereminilya.drive2_ok.utils.di.Singletons;
@@ -13,7 +12,7 @@ import com.example.ereminilya.drive2_ok.utils.di.SingletonsComponent;
 
 public class App extends Application {
 
-    @NonNull private SingletonsComponent component;
+    private SingletonsComponent component;
 
     @Override public void onCreate() {
         super.onCreate();

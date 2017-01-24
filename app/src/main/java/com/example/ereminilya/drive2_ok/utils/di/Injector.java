@@ -1,6 +1,7 @@
 package com.example.ereminilya.drive2_ok.utils.di;
 
 import com.example.ereminilya.drive2_ok.App;
+import com.example.ereminilya.drive2_ok.MainActivity;
 import com.example.ereminilya.drive2_ok.login.LoginScreen;
 import com.example.ereminilya.drive2_ok.profile.ProfileScreen;
 
@@ -16,5 +17,9 @@ public class Injector {
 
     public static void inject(ProfileScreen profileScreen) {
         ((App) profileScreen.getApplicationContext()).getComponent().inject(profileScreen);
+    }
+
+    public static void inject(MainActivity mainActivity) {
+        ((App) mainActivity.getApplicationContext()).getComponent().inject(mainActivity);
     }
 }
