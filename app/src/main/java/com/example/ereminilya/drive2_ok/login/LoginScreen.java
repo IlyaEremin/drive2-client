@@ -2,6 +2,7 @@ package com.example.ereminilya.drive2_ok.login;
 
 import android.app.ProgressDialog;
 import android.support.annotation.Nullable;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 
 import com.bluelinelabs.conductor.RouterTransaction;
@@ -10,6 +11,7 @@ import com.example.ereminilya.drive2_ok.R;
 import com.example.ereminilya.drive2_ok.UserInteractor;
 import com.example.ereminilya.drive2_ok.login.models.LoginBody;
 import com.example.ereminilya.drive2_ok.profile.ProfileScreen;
+import com.example.ereminilya.drive2_ok.utils.Keyboard;
 import com.example.ereminilya.drive2_ok.utils.Rxs;
 import com.example.ereminilya.drive2_ok.utils.di.Injector;
 import com.example.ereminilya.drive2_ok.utils.ui.BaseController;
@@ -20,6 +22,7 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import butterknife.OnEditorAction;
 import rx.Subscription;
 
 import static com.example.ereminilya.drive2_ok.utils.TextUtils.textOf;
@@ -47,6 +50,10 @@ public class LoginScreen extends BaseController {
     }
 
     @OnClick(R.id.enter) void onEnterClick() {
+        performLogin();
+    }
+
+    private void performLogin() {
         LoginBody loginBody = new LoginBody(textOf(uiLoginEt), textOf(uiPasswordEt));
         showProgressDialog();
         loginSubscription = userInteractor.login(loginBody)
@@ -64,6 +71,15 @@ public class LoginScreen extends BaseController {
             }, error -> {
                 // TODO parse error
             });
+    }
+
+    @OnEditorAction(value = R.id.et_password) boolean onEditActionOnMessageText(int actionCode) {
+        if (actionCode == EditorInfo.IME_ACTION_DONE) {
+            Keyboard.hide(uiPasswordEt);
+            performLogin();
+            return true;
+        }
+        return false;
     }
 
     private void showProgressDialog() {
