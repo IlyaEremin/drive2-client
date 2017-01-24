@@ -10,6 +10,7 @@ import java.util.List;
 
 public class LoginResponse {
 
+    private List<String>  error;
     private InnerResponse response;
     private List<String>  atoms;
 
@@ -23,6 +24,10 @@ public class LoginResponse {
 
     public List<String> getAtoms() {
         return atoms;
+    }
+
+    public List<String> getError() {
+        return error;
     }
 
     private static class InnerResponse {
