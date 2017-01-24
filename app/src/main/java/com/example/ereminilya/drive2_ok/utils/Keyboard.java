@@ -12,11 +12,11 @@ import android.view.inputmethod.InputMethodManager;
 public class Keyboard {
 
     public static void hide(@NonNull View view) {
-        InputMethodManager imm = (InputMethodManager) view.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) view.getContext()
+            .getSystemService(Context.INPUT_METHOD_SERVICE);
         if (!imm.isActive()) {
             return;
         }
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
-
 }
